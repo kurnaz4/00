@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_za_change_na_potrebitel.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Change Profile</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <div class="logo_name">SchoolEats</div>
+            <i class='bx bx-menu' id="btn" ></i>
+        </div>
+        <ul class="nav-list">
+          <li>
+              <i class='bx bx-search' ></i>
+             <input type="text" placeholder="Потърси...">
+             <span class="tooltip">Потърси</span>
+          </li>
+          <li> 
+                <a href="potrebitel.html">
+                  <i class='bx bx-pie-chart-alt-2' ></i>
+                  <span class="links_name">Начална страница</span>
+                </a>
+                <span class="tooltip">Начална страница</span>
+              </li>
+              
+              <li>
+                <a href="poruchki.html">
+                  <i class='bx bx-cart-alt' ></i>
+                  <span class="links_name">Налични продукти</span>
+                </a>
+                <span class="tooltip">Налични продукти</span>
+              </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-chat' ></i>
+             <span class="links_name">История на поръчки</span>
+           </a>
+           <span class="tooltip">История на поръчки</span>
+         </li>
+        
+        
+         
+         <li>
+           <a href="#">
+             <i class='bx bx-cog' ></i>
+             <span class="links_name">Настройки</span>
+           </a>
+           <span class="tooltip">Настройки</span>
+         </li>
+         <li class="profile">
+             <div class="profile-details">
+               <img src="default-profile-account-unknown-icon-black-silhouette-free-vector.jpg" alt="profileImg">
+               <div class="name_job">
+                 <div class="name">Мартин</div>
+                 <div class="job">Ученик</div>
+               </div>
+             </div>
+             <i  class='bx bx-log-out' id="log_out" ></i>
+         </li>
+        </ul>
+      </div>
+      <section class="home-section">
+        <div class="nav">
+            <div class="logo">
+                <p><a href="potrebitel.html"><img src="" alt=""></a> </p>
+            </div>
+    
+            
+        </div>
+    <div class="nav">
+      <div class="logo">
+        <p><a href="potrebitel.html"> <img src="LOGO.png" width="150px"></a></p>
+    </div>
+
+    <div class="right-links">
+      <a href="nachalen_login.html"> <button class="btn">Log Out</button> </a>
+  </div>
+
+        
+    </div>
+    <div class="container">
+        <div class="box form-box">
+            
+            
+            <form action="potrebitel.html" method="">
+                <div class="field input">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" value="" autocomplete="off" required>
+                </div>
+
+                <div class="field input">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" value="" autocomplete="off" required>
+                </div>
+
+                <div class="field input">
+                    <label for="age">Age</label>
+                    <input type="number" name="age" id="age" value="" autocomplete="off" required>
+                </div>
+                
+                <div class="field">
+                    
+                    <input type="submit" class="btn" name="submit" value="Update" required>
+                </div>
+                
+            </form>
+        </div>
+       
+      </div>
+
+      <script>
+        let sidebar = document.querySelector(".sidebar");
+        let closeBtn = document.querySelector("#btn");
+        let searchBtn = document.querySelector(".bx-search");
+        closeBtn.addEventListener("click", ()=>{
+          sidebar.classList.toggle("open");
+          menuBtnChange();
+        });
+        searchBtn.addEventListener("click", ()=>{ 
+          sidebar.classList.toggle("open");
+          menuBtnChange(); 
+        });
+        
+        function menuBtnChange() {
+         if(sidebar.classList.contains("open")){
+           closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+         }else {
+           closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+         }
+        }
+        </script>
+</body>
+</html>
